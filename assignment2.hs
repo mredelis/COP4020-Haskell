@@ -22,3 +22,7 @@
 -- The numbers must be either a multiple of five or have exactly three factors.
 -- problem3 100 --> [4,5,9,10,15,20,25,30,35,40,45,49,50,55,60,65,70,75,80,85,90,95,100]
 list n = [1..n]
+
+multOfFive n = n `mod` 5 == 0
+
+problem3 n = [ x | x <- [1..n], multOfFive x || x * x <= n ]
