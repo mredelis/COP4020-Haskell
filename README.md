@@ -8,10 +8,6 @@ Installation Instructions
 https://www.haskell.org/downloads/
 
 
-To install on macOS
-curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
-
-
 To start a simple repl, load ghci in terminal
 
 
