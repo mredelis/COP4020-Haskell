@@ -8,15 +8,15 @@ Installation Instructions
 https://www.haskell.org/downloads/
 
 
-To start a simple repl, load ghci in terminal
+1. To start a simple repl, load ghci in terminal
 
 
-Create a file with .hs extension
+2. Create a file with .hs extension
 
 
-To load file, cd to the location of the file or drag and drop file in terminal (after cd ) -> :l fileName
+3. To load file, cd to the location of the file or drag and drop file in terminal (after cd ) -> :l fileName
 
 
-To run everything -> :r
+4. To run everything -> :r
 
 
