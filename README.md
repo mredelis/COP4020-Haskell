@@ -10,12 +10,9 @@ https://www.haskell.org/downloads/
 
 1. To start a simple repl, load ghci in terminal
 
-
 2. Create a file with .hs extension
 
-
 3. To load file, cd to the location of the file or drag and drop file in terminal (after cd ) -> :l fileName
-
 
 4. To run everything -> :r
 
