@@ -1,3 +1,4 @@
 # haskell
 
-## Resources / TextBook http://learnyouahaskell.com/chapters
+Resources
+http://learnyouahaskell.com/chapters
