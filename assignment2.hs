@@ -20,6 +20,7 @@ isPrime n = ip n [2..(n `div` 2)]
 
 problem1 n = skipEveryOtherPrime (take (2*n) [ x | x <- [1..], isPrime x])
 
+
 -- 2. (33 pts) Create a function named problem2. Use recursion to solve this problem. 
 -- This function will take a single integer parameter. It indicates the maximum value of Fibonacci numbers that will be in the list. 
 -- The final solution will be a list of Fibonacci numbers that have a three as their right-most digit and are less than or equal to n. 
@@ -39,8 +40,6 @@ problem2 n = go n 1 1
 -- The numbers must be either a multiple of five or have exactly three factors.
 -- problem3 100 --> [4,5,9,10,15,20,25,30,35,40,45,49,50,55,60,65,70,75,80,85,90,95,100]
 
-problem3 n = [ x | x <- [1..n], (x `mod` 5 == 0) || (length (factors x) == 3)]
+problem3 n = [ x | x <- [1..n], (x `mod` 5 == 0) || (length (factors x) == 3) ]
     where
     factors n = [ x | x <- [1..n], n `mod` x == 0]
-
--- isPrime' n = factors n == [1, n]
