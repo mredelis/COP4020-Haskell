@@ -16,4 +16,6 @@ https://www.haskell.org/downloads/
 
 4. To run everything -> :r
 
+5. Prelude> :set prompt "ghci> " to change the prompt 
+
 
