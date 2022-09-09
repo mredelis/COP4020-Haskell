@@ -51,3 +51,62 @@ evenFib n = sum (go n 1 1)
         | (f+s) > n = []
         | otherwise = if even (f+s) then (f + s) : go n s (f + s) else go n s (f + s)
 
+--Check if a number is Prime
+
+--Made by D' using the simplest concept of a what a prime number is. However it won't work with 1
+factors n = [x | x <-[1..n], (n `mod` x == 0)]
+isPrimeD' n = factors n == [1, n]
+
+--From the slides. The idea is to divide n by all factors from [2..(n-1)]
+--If the remainder is 0, it means there's another factor other than 1 & n that divides n
+
+--Version 1----------------------
+-- isPrime n = ip n [2..(n-1)]
+--   where
+--   ip _[] = True --Base case
+--   ip n (x:xs) 
+--     | n `mod` x == 0 = False
+--     | otherwise = ip n xs
+---------------------------------
+
+--Version 2----------------------
+-- isPrime n = ip n [2..(n`div`2)]
+--  where
+--   ip _ [] = True
+--   ip n (x : xs)
+--    | n `mod` x == 0 = False
+--    | otherwise = ip n xs
+---------------------------------
+
+--Version 3----------------------
+isPrime n = ip n [2..(isqrt(n-1) + 1)]
+ where
+  ip _ [] = True
+  ip n (x:xs)
+    | n `mod` x == 0 = False
+    | otherwise = ip n xs
+
+isqrt :: Integral i => i -> i
+isqrt = floor . sqrt . fromIntegral
+---------------------------------
+
+--Generate a list of n Primes
+listPrimes n = take n ([x | x<-[1..], isPrime x])
+
+--Skip every other element
+skipSecond (x:y:xs) = y : skipSecond xs
+skipSecond _ = []
+
+--Guards vs Patters
+
+sumOfReverse n = n + read ((reverse (show n)))
+-- 1. show n to convert to string
+-- 2. reverse to reverse a string
+-- 3. read to convert back to number
+
+-- allDigitsOdd n = go (show n)
+--   where
+--     go (x: xs)
+--       | even x = False
+--       | null xs = True
+--       | otherwhise = go xs
