@@ -1,4 +1,5 @@
 -- ctrl + L to clear terminal
+{-# OPTIONS_GHC -Wno-incomplete-patterns #-}
 
 name = ['e', 'd', 'e', 'l', 'i', 's']
 
@@ -127,3 +128,31 @@ listRevs n = [x | x <- [1 .. (n -1)], allDigitsOdd (sumOfReverse x) && not (last
 
 -- 60 is the smallest number that can be divided by each of the numbers from 1 to 5 without any remainder.
 -- What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 10?
+
+isDivisibleBy1ToN v n = go v [1..n]
+  where
+  go v (x:xs)
+    | null xs = True
+    | v `mod` x /= 0 = False
+    | otherwise = go v xs
+
+smallest n = go n 1
+  where
+  go n v
+    |isDivisibleBy1ToN v n = v
+    | otherwise = go n (v+1)
+
+--smallest 10. Smallest positive number evenly divisble by 1..10
+
+-- The sum of the squares of the first ten natural numbers is 385
+-- The square of the sum of the first ten natural numbers is 3025
+-- Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.
+-- Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+
+sumOfSquares n = sum [ x^2 | x <- [1..n]]
+squareOfSums n = (sum [x | x <- [1..n]])^2
+difference n = squareOfSums n - sumOfSquares n
+
+-- The prime factors of 13195 are 5, 7, 13 and 29.
+-- What is the largest prime factor of the number 600851475143 ?
+largestPrimeFactor n = maximum [x | x<-[1..(n-1)], isPrime x, n `mod` x == 0]
