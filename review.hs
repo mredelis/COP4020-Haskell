@@ -16,7 +16,7 @@ spaces n = [ ' ' | _ <- [1..n] ]
 
 -- If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 -- Find the sum of all the multiples of 3 or 5 below 1000.
-sumOfNatural n = sum [ x | x <- [1..(n-1)], (x `mod` 3 == 0 || x `mod` 5 == 0)]
+sumOfNatural n = sum [ x | x <- [1..(n-1)], x `mod` 3 == 0 || x `mod` 5 == 0]
 
 -- A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
 -- Find the largest palindrome made from the product of two 3-digit numbers.
@@ -38,7 +38,7 @@ listFib' n = [ (x, fib x) | x <- [1 .. n] ]
 
 --List of Fib Numbers below n
 fibList n = go n 1 1
-    where 
+    where
     go n f s --first and second
         | (f+s) > n = []
         | otherwise = (f+s) : go n s (f+s)
@@ -47,14 +47,14 @@ fibList n = go n 1 1
 --List of even Fib Numbers below n. Get the sum
 evenFib n = sum (go n 1 1)
   where
-    go n f s 
+    go n f s
         | (f+s) > n = []
         | otherwise = if even (f+s) then (f + s) : go n s (f + s) else go n s (f + s)
 
 --Check if a number is Prime
 
 --Made by D' using the simplest concept of a what a prime number is. However it won't work with 1
-factors n = [x | x <-[1..n], (n `mod` x == 0)]
+factors n = [x | x <-[1..n], n `mod` x == 0]
 isPrimeD' n = factors n == [1, n]
 
 --From the slides. The idea is to divide n by all factors from [2..(n-1)]
@@ -99,14 +99,31 @@ skipSecond _ = []
 
 --Guards vs Patters
 
-sumOfReverse n = n + read ((reverse (show n)))
+-- Some positive integers n have the property that the sum [ n + reverse(n) ] consists entirely of odd (decimal) digits. 
+-- For instance, 36 + 63 = 99 and 409 + 904 = 1313. We will call such numbers reversible; so 36, 63, 409, and 904 are reversible. 
+-- Leading zeroes are not allowed in either n or reverse(n). There are 120 reversible numbers below one-thousand.
+
+sumOfReverse n = n + read (reverse (show n))
 -- 1. show n to convert to string
 -- 2. reverse to reverse a string
 -- 3. read to convert back to number
 
--- allDigitsOdd n = go (show n)
---   where
---     go (x: xs)
---       | even x = False
---       | null xs = True
---       | otherwhise = go xs
+--Convert the char value of a number to a number
+charValue c = fromEnum c - 48
+
+allDigitsOdd n = go (show n)
+  where
+    go [] = True
+    go (x:xs)
+      | even (charValue x) = False
+      | otherwise = go xs
+
+lastDigitZero n = last (show n) == '0'
+
+howManyRevs n = length [ x | x<-[1..(n-1)], allDigitsOdd(sumOfReverse x) && not(lastDigitZero x)]
+-- 1. The list goes up to (n-1) bc exercise says below n
+
+listRevs n = [x | x <- [1 .. (n -1)], allDigitsOdd (sumOfReverse x) && not (lastDigitZero x)]
+
+-- 60 is the smallest number that can be divided by each of the numbers from 1 to 5 without any remainder.
+-- What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 10?
