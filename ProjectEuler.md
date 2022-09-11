@@ -8,7 +8,7 @@
 | 6   | Sum square difference                 |   y     | Solved in class and in review.hs file
 | 7   | 10001st prime                         |   y     |
 | 8   | Largest product in a series           |         |
-| 9   | Special Pythagorean triplet           |         |
+| 9   | Special Pythagorean triplet           |   y     |
 | 10  | Summation of primes                   |         |
 | 11  | Largest product in a grid             |         |
 | 12  | Highly divisible triangular number    |         |
