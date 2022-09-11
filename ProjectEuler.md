@@ -9,8 +9,8 @@
 | 7   | 10001st prime                         |   y     |
 | 8   | Largest product in a series           |         |
 | 9   | Special Pythagorean triplet           |   y     |
-| 10  | Summation of primes                   |         |
-| 11  | Largest product in a grid             |         |
+| 10  | Summation of primes                   |   y     |
+| 11  | Largest product in a grid             |         | How can I recrete a grid in haskell?
 | 12  | Highly divisible triangular number    |         |
 | 13  | Large sum                             |         |
 | 14  | Longest Collatz sequence              |         |
