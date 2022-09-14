@@ -4,19 +4,19 @@
 | 2   | Even Fibonacci numbers                |   y     |
 | 3   | Largest prime factor                  |   y     |
 | 4   | Largest palindrome product            |   y     |
-| 5   | Smallest multiple                     |   y     |
+| 5   | Smallest multiple                     |   y     | Solved in class "Types and typeclasses"
 | 6   | Sum square difference                 |   y     | Solved in class and in review.hs file
 | 7   | 10001st prime                         |   y     |
 | 8   | Largest product in a series           |         |
 | 9   | Special Pythagorean triplet           |   y     |
 | 10  | Summation of primes                   |   y     |
-| 11  | Largest product in a grid             |         | How can I recrete a grid in haskell?
-| 12  | Highly divisible triangular number    |         |
-| 13  | Large sum                             |         |
-| 14  | Longest Collatz sequence              |         |
-| 15  | Lattice paths                         |         |
-| 16  | Power digit sum                       |         |
-| 17  | Number letter counts                  |         |
+| 11  | Largest product in a grid             |   x     | How can I recrete a grid in haskell?
+| 12  | Highly divisible triangular number    |   y     | Solved in class "Curried and Higher Order Functions"
+| 13  | Large sum                             |   x     | Another grid. No idea
+| 14  | Longest Collatz sequence              |   y     | Solved in class "Curried and Higher Order Functions"
+| 15  | Lattice paths                         |   x     |
+| 16  | Power digit sum                       |   y     |
+| 17  | Number letter counts                  |   x     |
 | 18  | Maximum path sum I                    |         |
 | 19  | Counting Sundays                      |         |
 | 20  | Factorial digit sum                   |         |
@@ -50,3 +50,6 @@
 | 48  | Self powers                           |         |
 | 49  | Prime permutations                    |         |
 | 50  | Consecutive prime sum                 |         |
+
+| 92  | Square digit chains                   |    y    | Solved in class "Curried and Higher Order Functions"
+| 145 | Reversible number below n             |    y    | Solved in class "Types and typeclasses"
