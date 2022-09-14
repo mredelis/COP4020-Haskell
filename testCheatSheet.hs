@@ -1,23 +1,10 @@
 -- ctrl + L to clear terminal
 {-# OPTIONS_GHC -Wno-incomplete-patterns #-}
 
-name = ['e', 'd', 'e', 'l', 'i', 's']
-
-boomBngs xs = [if x < 3 then "Boom!" else "Bang!" | x <- xs, odd x]
-
 isPalindrome x = show x == reverse (show x)
-
-scale x factor = x * factor
-
--- Define a function doublePos xs that doubles the positive elements in a list of integers
-doublePos xs = [if x > 0 then 2 * x else x | x <- xs]
 
 -- Define a function spaces n which returns a string of n spaces.
 spaces n = [' ' | _ <- [1 .. n]]
-
--- If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
--- Find the sum of all the multiples of 3 or 5 below 1000.
-sumOfNatural n = sum [x | x <- [1 .. (n -1)], x `mod` 3 == 0 || x `mod` 5 == 0]
 
 -- A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
 -- Find the largest palindrome made from the product of two 3-digit numbers.
@@ -51,9 +38,16 @@ evenFib n = sum (go n 1 1)
       | (f + s) > n = []
       | otherwise = if even (f + s) then (f + s) : go n s (f + s) else go n s (f + s)
 
---Check if a number is Prime
+--Convert the char value of a number to a number
+charValue c = fromEnum c - 48
+-- 1. show n to convert to string
+-- 2. reverse to reverse a string
+-- 3. read to convert back to number
 
---Made by D' using the simplest concept of a what a prime number is. However it won't work with 1
+
+--Check if a number is Prime--
+
+--Made by D' using the simplest concept of what a prime number is. However it won't work with 1
 factors n = [x | x <- [1 .. n], n `mod` x == 0]
 
 isPrimeD' n = factors n == [1, n]
@@ -108,13 +102,6 @@ skipSecond _ = []
 
 sumOfReverse n = n + read (reverse (show n))
 
--- 1. show n to convert to string
--- 2. reverse to reverse a string
--- 3. read to convert back to number
-
---Convert the char value of a number to a number
-charValue c = fromEnum c - 48
-
 allDigitsOdd n = go (show n)
   where
     go [] = True
@@ -148,17 +135,3 @@ smallest n = go n 1
 
 --smallest 10. Smallest positive number evenly divisble by 1..10
 
--- The sum of the squares of the first ten natural numbers is 385
--- The square of the sum of the first ten natural numbers is 3025
--- Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.
--- Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
-
-sumOfSquares n = sum [x ^ 2 | x <- [1 .. n]]
-
-squareOfSums n = (sum [x | x <- [1 .. n]]) ^ 2
-
-difference n = squareOfSums n - sumOfSquares n
-
--- The prime factors of 13195 are 5, 7, 13 and 29.
--- What is the largest prime factor of the number 600851475143 ?
-largestPrimeFactor n = maximum [x | x <- [1 .. (n -1)], isPrime x, n `mod` x == 0]
