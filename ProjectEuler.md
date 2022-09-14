@@ -5,7 +5,7 @@
 | 3   | Largest prime factor                  |   y     |
 | 4   | Largest palindrome product            |   y     |
 | 5   | Smallest multiple                     |   y     | Solved in class "Types and typeclasses"
-| 6   | Sum square difference                 |   y     | Solved in class and in review.hs file
+| 6   | Sum square difference                 |   y     | Solved in class "Types and typeclasses"
 | 7   | 10001st prime                         |   y     |
 | 8   | Largest product in a series           |         |
 | 9   | Special Pythagorean triplet           |   y     |
