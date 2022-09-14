@@ -92,7 +92,6 @@ thousandDigitNum = "73167176531330624919225119674426574742355349194934\
 greatestProduct n = maximum [product (take n (drop x (map digitToInt thousandDigitNum))) | x <- [0..(length thousandDigitNum - n)]]
 
 -- This helper function takes the ASCII value of a character and converts it to an integer value
-digitToInt :: Char -> Int
 digitToInt c = fromEnum c - fromEnum '0'
 
 

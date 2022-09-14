@@ -7,7 +7,7 @@
 | 5   | Smallest multiple                     |   y     | Solved in class "Types and typeclasses"
 | 6   | Sum square difference                 |   y     | Solved in class and in review.hs file
 | 7   | 10001st prime                         |   y     |
-| 8   | Largest product in a series           |         |
+| 8   | Largest product in a series           |   y     | 
 | 9   | Special Pythagorean triplet           |   y     |
 | 10  | Summation of primes                   |   y     |
 | 11  | Largest product in a grid             |   x     | How can I recrete a grid in haskell?
