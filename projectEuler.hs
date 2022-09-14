@@ -55,7 +55,8 @@ smallest n = go n 1
       | isDivisibleBy1ToN i n = i
       | otherwise = go n (i + 1)
 
--- 6. Sum of Square Difference
+-- 6. Sum of Square Difference. 
+sumOfSquares n = sum [x^2 | x<-[1..n]]
 
 
 -- 7.
