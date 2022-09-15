@@ -236,8 +236,6 @@ fib n = go n 1 1
 -- What is the first value which can be written as the sum of primes in over five thousand different ways?
 
 
-
-
 -- 92. Square digit chains
 -- A number chain is created by continuously adding the square of the digits in a number to form a new number until it has been seen before.
 -- For example,
