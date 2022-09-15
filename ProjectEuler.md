@@ -24,7 +24,7 @@
 | 22  | Names scores                          |         |
 | 23  | Non-abundant sums                     |         |
 | 24  | Lexicographic permutations            |         |
-| 25  | 1000-digit Fibonacci number           |         |
+| 25  | 1000-digit Fibonacci number           |    y    |
 | 26  | Reciprocal cycles                     |         |
 | 27  | Quadratic primes                      |         |
 | 28  | Number spiral diagonals               |         |
