@@ -190,6 +190,41 @@ powerDigitSum n = go (show(2^n))
      | otherwise = charValue x + go xs
 
 
+-- 25. 1000-digit Fibonacci number
+-- The Fibonacci sequence is defined by the recurrence relation:
+-- Fn = Fn−1 + Fn−2, where F1 = 1 and F2 = 1.
+-- Hence the first 12 terms will be:
+-- F1 = 1
+-- F2 = 1
+-- F3 = 2
+-- F4 = 3
+-- F5 = 5
+-- F6 = 8
+-- F7 = 13
+-- F8 = 21
+-- F9 = 34
+-- F10 = 55
+-- F11 = 89
+-- F12 = 144
+-- The 12th term, F12, is the first term to contain three digits.
+-- What is the index of the first term in the Fibonacci sequence to contain 1000 digits?
+
+-- main recursive function. Will return the index of the first term in the Fibonacci sequence to contain 1000 digits
+firstFibWithNDigits n = go 1
+  where
+    go c
+     | length (show (fib c)) == n = c -- base case, when the length of the number is equal to n
+     | otherwise = go (c+1)           -- recursive case, when the length of the number is not equal to n
+
+-- helper recursive function will return the nth Fibonacci number
+fib n = go n 1 1
+  where
+    go n f s                          -- n-number of the Fibonacci sequence, f-first number, s-second number
+     | n == 1 = f                     -- base case, when the number of the Fibonacci sequence is 1
+     | n == 2 = s                     -- base case, when the number of the Fibonacci sequence is 2
+     | otherwise = go (n-1) s (f+s)   -- recursive case, when the number of the Fibonacci sequence is greater than 2
+
+
 
 -- 92. Square digit chains
 -- A number chain is created by continuously adding the square of the digits in a number to form a new number until it has been seen before.
