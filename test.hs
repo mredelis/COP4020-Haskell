@@ -1,3 +1,5 @@
+-- Edelis Molina
+
 -- 1. (33 pts) Create a function named test1Problem1. Use a list comprehension for the main function. This
 -- function will take a single integer parameter. It indicates the number of primes that will be the final list. The
 -- final solution will output a list of every other prime. (Please note that primes start at 2.) 
