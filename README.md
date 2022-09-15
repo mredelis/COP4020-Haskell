@@ -19,3 +19,4 @@ https://www.haskell.org/downloads/
 5. Prelude> :set prompt "ghci> " to change the prompt 
 
 
+Kudos to the Queens branch contributor @bet93

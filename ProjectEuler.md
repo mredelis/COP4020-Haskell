@@ -6,13 +6,13 @@
 | 4   | Largest palindrome product            |   y     |
 | 5   | Smallest multiple                     |   y     | Solved in class "Types and typeclasses"
 | 6   | Sum square difference                 |   y     | Solved in class "Types and typeclasses"
-| 7   | 10001st prime                         |   y     |
-| 8   | Largest product in a series           |         |
+| 7   | 10001st prime                         |   y     | Solved in class "Types and typeclasses"
+| 8   | Largest product in a series           |   N     | 
 | 9   | Special Pythagorean triplet           |   y     |
 | 10  | Summation of primes                   |   y     |
-| 11  | Largest product in a grid             |   x     | How can I recrete a grid in haskell?
+| 11  | Largest product in a grid             |   N     | Another grid. No idea
 | 12  | Highly divisible triangular number    |   y     | Solved in class "Curried and Higher Order Functions"
-| 13  | Large sum                             |   x     | Another grid. No idea
+| 13  | Large sum                             |   N     | Another grid. No idea
 | 14  | Longest Collatz sequence              |   y     | Solved in class "Curried and Higher Order Functions"
 | 15  | Lattice paths                         |   x     |
 | 16  | Power digit sum                       |   y     |
