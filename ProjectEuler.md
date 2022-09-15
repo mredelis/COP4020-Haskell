@@ -14,7 +14,7 @@
 | 12  | Highly divisible triangular number    |   y     | Solved in class "Curried and Higher Order Functions"
 | 13  | Large sum                             |   N     | Another grid. No idea
 | 14  | Longest Collatz sequence              |   y     | Solved in class "Curried and Higher Order Functions"
-| 15  | Lattice paths                         |   x     |
+| 15  | Lattice paths                         |   N     |
 | 16  | Power digit sum                       |   y     |
 | 17  | Number letter counts                  |   x     |
 | 18  | Maximum path sum I                    |         |
@@ -48,8 +48,9 @@
 | 46  | Goldbach's other conjecture           |         |
 | 47  | Distinct primes factors               |         |
 | 48  | Self powers                           |         |
-| 49  | Prime permutations                    |         |
-| 50  | Consecutive prime sum                 |         |
+| 49  | Prime permutations                    |    y    | Solved in class "Modules"
+| 50  | Consecutive prime sum                 |    y    | Solved in class "Modules"
 
 | 92  | Square digit chains                   |    y    | Solved in class "Curried and Higher Order Functions"
+| 125 | Palindromic Sums                      |    y    | Solved in class "Curried and Higher Order Functions"
 | 145 | Reversible number below n             |    y    | Solved in class "Types and typeclasses"
