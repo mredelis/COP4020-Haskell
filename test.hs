@@ -13,7 +13,12 @@ test1Problem2 n = go n 1 1
       | (f + s) `mod` 10 == 3 = (f + s) : go n s (f + s)
       | otherwise = go n s (f + s)
 
--- (34 pts) Create a function named test1Problem3. For this problem, you can solve it any way you’d like.
+-- 3. (34 pts) Create a function named test1Problem3. For this problem, you can solve it any way you’d like.
 -- You may (and should) use helper functions. Create a list from numbers from 1 to n. The numbers must be
--- either a multiple of five or have exactly three factors. test1Problem3 100 →
+-- either a multiple of five or have exactly three factors. 
+-- test1Problem3 100 →
 -- [4,5,9,10,15,20,25,30,35,40,45,49,50,55,60,65,70,75,80,85,90,95,100]
+
+factors n = [ x | x <- [1 .. n], n `mod` x == 0]
+
+test1Problem3 n = [ x | x <- [1 .. n], (x `mod` 5 == 0) || (length (factors x) == 3)]
