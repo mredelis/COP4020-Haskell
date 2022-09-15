@@ -1,13 +1,13 @@
 -- Edelis Molina
 
--- 1. (33 pts) Create a function named test1Problem1. Use a list comprehension for the main function. This
--- function will take a single integer parameter. It indicates the number of primes that will be the final list. The
--- final solution will output a list of every other prime. (Please note that primes start at 2.) 
+-- 1. (33 pts) Create a function named test1Problem1. Use a list comprehension for the main function. 
+-- This function will take a single integer parameter. It indicates the number of primes that will be the final list. 
+-- The final solution will output a list of every other prime. (Please note that primes start at 2.) 
 -- test1Problem1 10 → [2,5,11,17,23,31,41,47,59,67]
 -- test1Problem1 7 → [2,5,11,17,23,31,41]
 
-skipEveryOtherPrime (x : y : xs) = y : skipEveryOtherPrime xs
-skipEveryOtherPrime _ = []
+skipEveryOtherElem (x : y : xs) = y : skipEveryOtherElem xs
+skipEveryOtherElem _ = []
 
 -- From the slides. "isPrimeFunction"
 isPrime n = ip n [2 .. (n `div` 2)]
@@ -17,7 +17,7 @@ isPrime n = ip n [2 .. (n `div` 2)]
       | n `mod` x == 0 = False
       | otherwise = ip n xs
 
-test1Problem1 n = skipEveryOtherPrime (take (2 * n) [x | x <- [1 ..], isPrime x])
+test1Problem1 n = skipEveryOtherElem (take (2 * n) [x | x <- [1 ..], isPrime x])
 
 
 
