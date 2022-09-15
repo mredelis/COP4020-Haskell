@@ -212,7 +212,7 @@ powerDigitSum n = go (show(2^n))
 -- main recursive function. Will return the index of the first term in the Fibonacci sequence to contain 1000 digits
 firstFibWithNDigits n = go 1
   where
-    go c
+    go c                              -- c-counter
      | length (show (fib c)) == n = c -- base case, when the length of the number is equal to n
      | otherwise = go (c+1)           -- recursive case, when the length of the number is not equal to n
 
