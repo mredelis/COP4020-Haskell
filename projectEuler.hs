@@ -56,7 +56,11 @@ smallest n = go n 1
       | otherwise = go n (i + 1)
 
 -- 6. Sum of Square Difference
+-- 6. Sum of Square Difference. 
+sumOfSquares n = sum [x^2 | x<-[1..n]]
+squareOfSums n = (sum [ x | x<-[1..n]])^2
 
+difference n = squareOfSums n - sumOfSquares n
 
 -- 7.
 -- By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
