@@ -2,10 +2,8 @@
 -- Everything is immutable so once a value is set it is set forever
 -- Functions can be passed as a parameter to other functions 
 -- Recursion is used often 
--- Haskell has no for, while, or technically variables, but it does have 
--- constants
--- Haskell is lazy in that it doesn't execute more then is needed and instead 
--- just checks for errors
+-- Haskell has no for, while, or technically variables, but it does have constants
+-- Haskell is lazy in that it doesn't execute more then is needed and instead just checks for errors
 
 -- Best Free Haskell Book
 -- http://learnyouahaskell.com/chapters
